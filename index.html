@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailor Fit - Your Personal Tailor</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        playfair: ['Playfair Display', 'serif'],
+                        poppins: ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#2C3E50',
+                        secondary: '#E74C3C',
+                        accent: '#3498DB',
+                        light: '#F8F9FA',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-poppins">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <a href="/" class="flex items-center">
+                        <span class="text-2xl font-playfair font-bold text-primary">Tailor Fit</span>
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="/" class="text-primary hover:text-secondary">Home</a>
+                    <a href="pages/products.html" class="text-primary hover:text-secondary">Products</a>
+                    <a href="pages/measurements.html" class="text-primary hover:text-secondary">Measurements</a>
+                    <a href="pages/order-tracking.html" class="text-primary hover:text-secondary">Track Order</a>
+                    <a href="#" class="bg-primary text-white px-4 py-2 rounded-md hover:bg-secondary transition duration-300">Book Now</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button class="mobile-menu-button">
+                        <i class="fas fa-bars text-2xl text-primary"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="mobile-menu hidden md:hidden">
+            <a href="/" class="block py-2 px-4 text-sm hover:bg-gray-100">Home</a>
+            <a href="pages/products.html" class="block py-2 px-4 text-sm hover:bg-gray-100">Products</a>
+            <a href="pages/measurements.html" class="block py-2 px-4 text-sm hover:bg-gray-100">Measurements</a>
+            <a href="pages/order-tracking.html" class="block py-2 px-4 text-sm hover:bg-gray-100">Track Order</a>
+            <a href="#" class="block py-2 px-4 text-sm hover:bg-gray-100">Book Now</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="relative bg-cover bg-center h-screen" style="background-image: url('https://images.pexels.com/photos/4620843/pexels-photo-4620843.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750');">
+        <div class="absolute inset-0 bg-black opacity-50"></div>
+        <div class="relative z-10 flex items-center justify-center h-full text-center">
+            <div class="max-w-2xl px-4">
+                <h1 class="text-4xl md:text-6xl font-playfair font-bold text-white mb-6">Traditional Indian Clothing</h1>
+                <p class="text-xl text-white mb-8">Experience the elegance of custom-made traditional Indian attire</p>
+                <a href="pages/measurements.html" class="bg-secondary text-white px-8 py-3 rounded-md text-lg hover:bg-primary transition duration-300">Get Started</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Features Section -->
+    <section class="py-16 bg-light">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-3xl font-playfair font-bold text-center mb-12">Why Choose Us</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center p-6">
+                    <i class="fas fa-tape-measure text-4xl text-secondary mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">Perfect Measurements</h3>
+                    <p class="text-gray-600">Advanced measurement system for the perfect fit every time</p>
+                </div>
+                <div class="text-center p-6">
+                    <i class="fas fa-tshirt text-4xl text-secondary mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">Premium Fabrics</h3>
+                    <p class="text-gray-600">Handpicked premium fabrics for ultimate comfort</p>
+                </div>
+                <div class="text-center p-6">
+                    <i class="fas fa-shipping-fast text-4xl text-secondary mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">Quick Delivery</h3>
+                    <p class="text-gray-600">Track your order and get it delivered at your doorstep</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="py-16">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-3xl font-playfair font-bold text-center mb-12">How It Works</h2>
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-secondary rounded-full flex items-center justify-center text-white text-2xl mx-auto mb-4">1</div>
+                    <h3 class="text-xl font-semibold mb-2">Choose Style</h3>
+                    <p class="text-gray-600">Select from our wide range of styles</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-secondary rounded-full flex items-center justify-center text-white text-2xl mx-auto mb-4">2</div>
+                    <h3 class="text-xl font-semibold mb-2">Get Measured</h3>
+                    <p class="text-gray-600">Input your measurements online</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-secondary rounded-full flex items-center justify-center text-white text-2xl mx-auto mb-4">3</div>
+                    <h3 class="text-xl font-semibold mb-2">Place Order</h3>
+                    <p class="text-gray-600">Confirm your order and make payment</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-secondary rounded-full flex items-center justify-center text-white text-2xl mx-auto mb-4">4</div>
+                    <h3 class="text-xl font-semibold mb-2">Receive</h3>
+                    <p class="text-gray-600">Get your perfect fit delivered</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-16 bg-light">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-3xl font-playfair font-bold text-center mb-12">What Our Customers Say</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="text-secondary mb-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 mb-4">"Perfect fit and amazing quality! The online measurement system was so easy to use."</p>
+                    <p class="font-semibold">- Sarah Johnson</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="text-secondary mb-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 mb-4">"The attention to detail is impressive. My suit fits better than any I've ever owned."</p>
+                    <p class="font-semibold">- Michael Brown</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="text-secondary mb-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 mb-4">"Exceptional service and the fabric quality is outstanding. Highly recommended!"</p>
+                    <p class="font-semibold">- Emily Davis</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="py-16">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-8">
+                <div>
+                    <h2 class="text-3xl font-playfair font-bold mb-6">Get in Touch</h2>
+                    <p class="text-gray-600 mb-8">Have questions? We're here to help you create the perfect custom-made clothing.</p>
+                    <div class="space-y-4">
+                        <p class="flex items-center">
+                            <i class="fas fa-phone text-secondary mr-4"></i>
+                            <span>+91 8187023866</span>
+                        </p>
+                        <p class="flex items-center">
+                            <i class="fas fa-envelope text-secondary mr-4"></i>
+                            <span>contact@tailorfit.com</span>
+                        </p>
+                        <p class="flex items-center">
+                            <i class="fas fa-map-marker-alt text-secondary mr-4"></i>
+                            <span>Kalasalingam University, Krishnankoil</span>
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <form class="space-y-4">
+                        <div>
+                            <input type="text" placeholder="Your Name" class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-secondary">
+                        </div>
+                        <div>
+                            <input type="email" placeholder="Your Email" class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-secondary">
+                        </div>
+                        <div>
+                            <textarea placeholder="Your Message" rows="4" class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-secondary"></textarea>
+                        </div>
+                        <button type="submit" class="bg-secondary text-white px-6 py-2 rounded-md hover:bg-primary transition duration-300">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-white py-12">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-playfair font-bold mb-4">Tailor Fit</h3>
+                    <p class="text-gray-300">Your personal tailor for the perfect fit.</p>
+                    <p class="text-gray-300 mt-2">
+                        <i class="fas fa-phone mr-2"></i>+91 8187023866
+                    </p>
+                    <p class="text-gray-300">
+                        <i class="fas fa-map-marker-alt mr-2"></i>Kalasalingam University, Krishnankoil
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-300 hover:text-white">About Us</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white">Services</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white">Products</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-300 hover:text-white">Custom Suits</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white">Alterations</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white">Wedding Attire</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white">Accessories</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Follow Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-300 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-300 hover:text-white"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-300 hover:text-white"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-300 hover:text-white"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+            <p class="text-gray-300">&copy; 2024 Tailor Fit. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Mobile Menu -->
+    <script>
+        const mobileMenuButton = document.querySelector('.mobile-menu-button');
+        const mobileMenu = document.querySelector('.mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
