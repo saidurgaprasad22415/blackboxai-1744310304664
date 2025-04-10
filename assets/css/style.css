@@ -1,0 +1,28 @@
+/* Custom styles for StitchStyle */
+
+/* Example of overriding Tailwind styles */
+body {
+    background-color: #F8F9FA; /* Light background */
+}
+
+/* Custom button styles */
+button {
+    transition: background-color 0.3s ease;
+}
+
+/* Custom input styles */
+input, textarea {
+    transition: border-color 0.3s ease;
+}
+
+/* Hover effects for buttons */
+button:hover {
+    background-color: #3498DB; /* Change to accent color on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .mobile-menu {
+        display: none; /* Hide mobile menu by default */
+    }
+}
