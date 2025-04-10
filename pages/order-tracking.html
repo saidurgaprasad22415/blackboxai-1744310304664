@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Tracking - StitchStyle</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        playfair: ['Playfair Display', 'serif'],
+                        poppins: ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#2C3E50',
+                        secondary: '#E74C3C',
+                        accent: '#3498DB',
+                        light: '#F8F9FA',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-poppins bg-light">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <a href="/" class="flex items-center">
+                        <span class="text-2xl font-playfair font-bold text-primary">StitchStyle</span>
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="/" class="text-primary hover:text-secondary">Home</a>
+                    <a href="products.html" class="text-primary hover:text-secondary">Products</a>
+                    <a href="measurements.html" class="text-primary hover:text-secondary">Measurements</a>
+                    <a href="order-tracking.html" class="text-primary hover:text-secondary">Track Order</a>
+                    <a href="#" class="bg-primary text-white px-4 py-2 rounded-md hover:bg-secondary transition duration-300">Book Now</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button class="mobile-menu-button">
+                        <i class="fas fa-bars text-2xl text-primary"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Order Tracking Section -->
+    <div class="max-w-4xl mx-auto px-4 py-16">
+        <div class="bg-white rounded-lg shadow-lg p-8">
+            <h1 class="text-3xl font-playfair font-bold text-center mb-8">Track Your Order</h1>
+            
+            <!-- Order Search Form -->
+            <form id="tracking-form" class="mb-8">
+                <div class="flex flex-col md:flex-row gap-4">
+                    <input type="text" id="order-id" placeholder="Enter Order ID" class="flex-1 px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-secondary" required>
+                    <button type="submit" class="bg-secondary text-white px-8 py-2 rounded-md hover:bg-primary transition duration-300">Track Order</button>
+                </div>
+            </form>
+
+            <!-- Order Status Display (Initially Hidden) -->
+            <div id="order-status" class="hidden">
+                <div class="border-b pb-4 mb-6">
+                    <h2 class="text-xl font-semibold mb-2">Order #ST12345</h2>
+                    <p class="text-gray-600">Ordered on: January 15, 2024</p>
+                </div>
+
+                <!-- Status Timeline -->
+                <div class="relative">
+                    <div class="absolute left-8 top-0 h-full w-0.5 bg-gray-200"></div>
+                    
+                    <!-- Order Confirmed -->
+                    <div class="relative flex items-center mb-8">
+                        <div class="absolute left-8 -ml-3 h-6 w-6 rounded-full bg-green-500 border-4 border-white"></div>
+                        <div class="ml-16">
+                            <h3 class="font-semibold">Order Confirmed</h3>
+                            <p class="text-sm text-gray-600">January 15, 2024 - 10:30 AM</p>
+                            <p class="text-sm text-gray-600">Your order has been confirmed and is being processed.</p>
+                        </div>
+                    </div>
+
+                    <!-- Measurements Approved -->
+                    <div class="relative flex items-center mb-8">
+                        <div class="absolute left-8 -ml-3 h-6 w-6 rounded-full bg-green-500 border-4 border-white"></div>
+                        <div class="ml-16">
+                            <h3 class="font-semibold">Measurements Approved</h3>
+                            <p class="text-sm text-gray-600">January 16, 2024 - 2:45 PM</p>
+                            <p class="text-sm text-gray-600">Your measurements have been reviewed and approved.</p>
+                        </div>
+                    </div>
+
+                    <!-- In Production -->
+                    <div class="relative flex items-center mb-8">
+                        <div class="absolute left-8 -ml-3 h-6 w-6 rounded-full bg-blue-500 border-4 border-white"></div>
+                        <div class="ml-16">
+                            <h3 class="font-semibold">In Production</h3>
+                            <p class="text-sm text-gray-600">January 18, 2024 - 9:15 AM</p>
+                            <p class="text-sm text-gray-600">Your garment is currently being crafted by our expert tailors.</p>
+                        </div>
+                    </div>
+
+                    <!-- Quality Check -->
+                    <div class="relative flex items-center mb-8">
+                        <div class="absolute left-8 -ml-3 h-6 w-6 rounded-full bg-gray-300 border-4 border-white"></div>
+                        <div class="ml-16">
+                            <h3 class="font-semibold text-gray-500">Quality Check</h3>
+                            <p class="text-sm text-gray-500">Pending</p>
+                            <p class="text-sm text-gray-500">Final quality inspection of your garment.</p>
+                        </div>
+                    </div>
+
+                    <!-- Shipping -->
+                    <div class="relative flex items-center">
+                        <div class="absolute left-8 -ml-3 h-6 w-6 rounded-full bg-gray-300 border-4 border-white"></div>
+                        <div class="ml-16">
+                            <h3 class="font-semibold text-gray-500">Shipping</h3>
+                            <p class="text-sm text-gray-500">Pending</p>
+                            <p class="text-sm text-gray-500">Your order will be shipped to your provided address.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Estimated Delivery -->
+                <div class="mt-8 p-4 bg-gray-50 rounded-md">
+                    <h3 class="font-semibold mb-2">Estimated Delivery</h3>
+                    <p class="text-gray-600">Expected delivery by January 25, 2024</p>
+                </div>
+
+                <!-- Order Details -->
+                <div class="mt-8">
+                    <h3 class="font-semibold mb-4">Order Details</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                            <p class="text-sm text-gray-600">Items:</p>
+                            <p class="font-semibold">1x Custom Tailored Suit</p>
+                        </div>
+                        <div>
+                            <p class="text-sm text-gray-600">Shipping Address:</p>
+                            <p class="font-semibold">123 Fashion Street, Style City, ST 12345</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- No Order Found Message (Initially Hidden) -->
+            <div id="no-order" class="hidden text-center py-8">
+                <i class="fas fa-search text-4xl text-gray-400 mb-4"></i>
+                <p class="text-gray-600">No order found with this ID. Please check the order ID and try again.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-white py-12">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-playfair font-bold mb-4">StitchStyle</h3>
+                    <p class="text-gray-300">Your personal tailor for the perfect fit.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-300 hover:text-white">About Us</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white">Services</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white">Products</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-300 hover:text-white">Custom Suits</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white">Alterations</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white">Wedding Attire</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white">Accessories</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Follow Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-300 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-300 hover:text-white"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-300 hover:text-white"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-300 hover:text-white"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+                <p class="text-gray-300">&copy; 2024 StitchStyle. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.querySelector('.mobile-menu-button');
+        const mobileMenu = document.querySelector('.mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Order Tracking Form
+        const trackingForm = document.getElementById('tracking-form');
+        const orderStatus = document.getElementById('order-status');
+        const noOrder = document.getElementById('no-order');
+
+        trackingForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const orderId = document.getElementById('order-id').value;
+            
+            // Simulate API call with setTimeout
+            setTimeout(() => {
+                if (orderId === 'ST12345') {
+                    orderStatus.classList.remove('hidden');
+                    noOrder.classList.add('hidden');
+                } else {
+                    orderStatus.classList.add('hidden');
+                    noOrder.classList.remove('hidden');
+                }
+            }, 1000);
+        });
+    </script>
+</body>
+</html>
