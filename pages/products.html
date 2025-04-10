@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - Tailor Fit</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        playfair: ['Playfair Display', 'serif'],
+                        poppins: ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#2C3E50',
+                        secondary: '#E74C3C',
+                        accent: '#3498DB',
+                        light: '#F8F9FA',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-poppins bg-light">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <a href="/" class="flex items-center">
+                        <span class="text-2xl font-playfair font-bold text-primary">Tailor Fit</span>
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="/" class="text-primary hover:text-secondary">Home</a>
+                    <a href="products.html" class="text-primary hover:text-secondary">Products</a>
+                    <a href="measurements.html" class="text-primary hover:text-secondary">Measurements</a>
+                    <a href="order-tracking.html" class="text-primary hover:text-secondary">Track Order</a>
+                    <a href="#" class="bg-primary text-white px-4 py-2 rounded-md hover:bg-secondary transition duration-300">Book Now</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button class="mobile-menu-button">
+                        <i class="fas fa-bars text-2xl text-primary"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Products Header -->
+    <div class="bg-white py-16">
+        <div class="max-w-7xl mx-auto px-4">
+            <h1 class="text-4xl font-playfair font-bold text-center mb-4">Traditional Indian Attire</h1>
+            <p class="text-center text-gray-600 max-w-2xl mx-auto">Discover our collection of premium traditional Indian clothing, tailored to perfection with the finest fabrics and craftsmanship.</p>
+        </div>
+    </div>
+
+    <!-- Product Categories -->
+    <div class="max-w-7xl mx-auto px-4 py-16">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Kurta/Kurti -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <img src="https://images.pexels.com/photos/2531734/pexels-photo-2531734.jpeg" alt="Kurta" class="w-full h-64 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold mb-2">Kurta/Kurti</h3>
+                    <p class="text-gray-600 mb-4">Traditional tunic with elegant designs and comfortable fit.</p>
+                    <div class="space-y-2 mb-4">
+                        <p><strong>Fabric Options:</strong> Cotton, Silk, Linen</p>
+                        <p><strong>Styles:</strong> Regular, A-line, Straight</p>
+                        <p><strong>Customizations:</strong> Length, Sleeves, Collar</p>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <span class="text-primary font-semibold">Starting from ₹800</span>
+                        <a href="measurements.html" class="bg-secondary text-white px-4 py-2 rounded-md hover:bg-primary transition duration-300">Order Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Saree -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <img src="https://images.pexels.com/photos/2983464/pexels-photo-2983464.jpeg" alt="Saree" class="w-full h-64 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold mb-2">Saree</h3>
+                    <p class="text-gray-600 mb-4">Elegant drapes with intricate designs and blouse.</p>
+                    <div class="space-y-2 mb-4">
+                        <p><strong>Fabric Options:</strong> Silk, Chiffon, Georgette</p>
+                        <p><strong>Styles:</strong> Traditional, Contemporary</p>
+                        <p><strong>Customizations:</strong> Blouse Design, Border Style</p>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <span class="text-primary font-semibold">Starting from ₹1,500</span>
+                        <a href="measurements.html" class="bg-secondary text-white px-4 py-2 rounded-md hover:bg-primary transition duration-300">Order Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sherwani -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <img src="https://images.pexels.com/photos/2874037/pexels-photo-2874037.jpeg" alt="Sherwani" class="w-full h-64 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold mb-2">Sherwani</h3>
+                    <p class="text-gray-600 mb-4">Royal attire for special occasions with detailed embroidery.</p>
+                    <div class="space-y-2 mb-4">
+                        <p><strong>Fabric Options:</strong> Silk, Brocade, Velvet</p>
+                        <p><strong>Styles:</strong> Traditional, Modern, Indo-Western</p>
+                        <p><strong>Customizations:</strong> Embroidery, Buttons, Length</p>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <span class="text-primary font-semibold">Starting from ₹3,000</span>
+                        <a href="measurements.html" class="bg-secondary text-white px-4 py-2 rounded-md hover:bg-primary transition duration-300">Order Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Lehenga -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <img src="https://images.pexels.com/photos/2995309/pexels-photo-2995309.jpeg" alt="Lehenga" class="w-full h-64 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold mb-2">Lehenga</h3>
+                    <p class="text-gray-600 mb-4">Traditional skirt with matching blouse and dupatta.</p>
+                    <div class="space-y-2 mb-4">
+                        <p><strong>Fabric Options:</strong> Silk, Net, Georgette</p>
+                        <p><strong>Styles:</strong> Bridal, Party Wear, Traditional</p>
+                        <p><strong>Customizations:</strong> Embellishments, Blouse Design</p>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <span class="text-primary font-semibold">Starting from ₹2,500</span>
+                        <a href="measurements.html" class="bg-secondary text-white px-4 py-2 rounded-md hover:bg-primary transition duration-300">Order Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dhoti -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <img src="https://images.pexels.com/photos/2832007/pexels-photo-2832007.jpeg" alt="Dhoti" class="w-full h-64 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold mb-2">Dhoti</h3>
+                    <p class="text-gray-600 mb-4">Traditional lower garment with kurta combination.</p>
+                    <div class="space-y-2 mb-4">
+                        <p><strong>Fabric Options:</strong> Cotton, Silk</p>
+                        <p><strong>Styles:</strong> Traditional, Pre-stitched</p>
+                        <p><strong>Customizations:</strong> Length, Pleats Style</p>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <span class="text-primary font-semibold">Starting from ₹500</span>
+                        <a href="measurements.html" class="bg-secondary text-white px-4 py-2 rounded-md hover:bg-primary transition duration-300">Order Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Custom Design Section -->
+    <div class="bg-white py-16">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center">
+                <h2 class="text-3xl font-playfair font-bold mb-4">Need a Custom Design?</h2>
+                <p class="text-gray-600 mb-8">We specialize in creating custom traditional attire tailored to your specific requirements.</p>
+                <a href="#" class="bg-primary text-white px-8 py-3 rounded-md hover:bg-secondary transition duration-300">Request Custom Order</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-white py-12">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-playfair font-bold mb-4">Tailor Fit</h3>
+                    <p class="text-gray-300">Your personal tailor for the perfect fit.</p>
+                    <p class="text-gray-300 mt-2">
+                        <i class="fas fa-phone mr-2"></i>+91 8187023866
+                    </p>
+                    <p class="text-gray-300">
+                        <i class="fas fa-map-marker-alt mr-2"></i>Kalasalingam University, Krishnankoil
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-300 hover:text-white">About Us</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white">Services</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white">Products</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-300 hover:text-white">Custom Design</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white">Alterations</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white">Bridal Wear</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white">Accessories</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Follow Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-300 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-300 hover:text-white"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-300 hover:text-white"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-300 hover:text-white"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+                <p class="text-gray-300">&copy; 2024 Tailor Fit. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Mobile Menu -->
+    <script>
+        const mobileMenuButton = document.querySelector('.mobile-menu-button');
+        const mobileMenu = document.querySelector('.mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
